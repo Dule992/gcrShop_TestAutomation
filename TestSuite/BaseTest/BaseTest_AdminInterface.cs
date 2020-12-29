@@ -3,12 +3,13 @@ using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
+
 namespace gcrShop_TestAutomation.TestSuite
 {
-    public class BaseTest_UserInterface
+    public class BaseTest_AdminInterface
     {
         private IWebDriver driver;
-        private readonly string AUT_URL = "https://gcreddy.com/project/";
+        private readonly string AUT_URL = "https://gcreddy.com/project/admin/login.php";
         protected LoginPage loginPage;
 
         [SetUp]
@@ -21,6 +22,7 @@ namespace gcrShop_TestAutomation.TestSuite
             driver.Navigate().GoToUrl(AUT_URL);
 
             loginPage = new LoginPage(driver);
+
         }
 
         [TearDown]

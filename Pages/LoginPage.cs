@@ -41,7 +41,7 @@ namespace gcrShop_TestAutomation.Admin_login_page
             setPassword(password);
             click(loginButton);
 
-            return clickLoginButton();
+            return new AdminsPage(driver);
         }
 
         public string getErrorMessage()
